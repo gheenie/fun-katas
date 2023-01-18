@@ -2,11 +2,12 @@
 function getTweetData (tweet) {
   // Your code here
   const mentions = tweet.match(/@\w+/g) || [];
+  const tags = tweet.match(/#\w+/g) || [];
 
   const tweetData = { 
-    tags: [], 
+    tags: tags, 
     mentions: mentions, 
-    tagCount: 0, 
+    tagCount: tags.length, 
     mentionCount: mentions.length, 
     length: tweet.length
   };
