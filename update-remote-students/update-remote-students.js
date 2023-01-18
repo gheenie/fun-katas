@@ -3,7 +3,11 @@ function updateRemoteStudents (arr) {
   // Your code here
   const students = JSON.parse( JSON.stringify(arr) );
 
-  console.log(students);
+  students.forEach((student) => {
+    if (!student.hasOwnProperty('location')) {
+      student['location'] = 'remote';
+    }
+  });
 
   return students;
 }
