@@ -40,4 +40,8 @@ describe('', () => {
 
         expect(output).toBe(expected);
     });
+
+    // Upper with no child
+
+    // Lower with no parent
 });
