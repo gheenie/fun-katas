@@ -2,9 +2,10 @@
 function camelToEnglish(camelCasedSentence) {
   // Your code here
   
-  const englishSentence = camelCasedSentence.replace(/([A-Z])/g, ' $1').trim();
+  // Find all capitals, insert space before each.
+  const spaceInFrontOfCapitals = camelCasedSentence.replace(/([A-Z])/g, ' $1').trim();
 
-  return englishSentence[0].toUpperCase() + englishSentence.substring(1).toLowerCase() + '.';
+  return spaceInFrontOfCapitals[0].toUpperCase() + spaceInFrontOfCapitals.substring(1).toLowerCase() + '.';
 };
 
 module.exports = camelToEnglish;
