@@ -13,7 +13,7 @@ function rotateArray (inputArr, num) {
 
   const frontOfArr = arr.splice(0, numOfFrontItems);
   
-  return [...arr, ...frontOfArr];
+  return arr.concat(frontOfArr);
 };
 
 module.exports =  rotateArray;
