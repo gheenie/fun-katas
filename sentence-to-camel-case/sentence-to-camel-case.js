@@ -1,18 +1,18 @@
 // Please do not change the name of this function
-function sentenceToCamelCase (sentence, shouldUpperCC) {
+function sentenceToCamelCase (sentence, shouldCapitalise) {
   // Your code here
   
   const words = sentence.split(' ');
 
-  const wordsUpperCCed = words.map( (word) => {
+  const wordsCamelCased = words.map( word => {
     return word[0].toUpperCase() + word.substring(1).toLowerCase();
   } );
 
-  if (!shouldUpperCC) {
-    wordsUpperCCed[0] = wordsUpperCCed[0][0].toLowerCase() + wordsUpperCCed[0].substring(1);
+  if (!shouldCapitalise) {
+    wordsCamelCased[0] = wordsCamelCased[0][0].toLowerCase() + wordsCamelCased[0].substring(1);
   }
 
-  return wordsUpperCCed.join('');
+  return wordsCamelCased.join('');
 };
 
 module.exports = sentenceToCamelCase;
