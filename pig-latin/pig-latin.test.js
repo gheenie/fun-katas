@@ -21,6 +21,16 @@ describe('', () => {
         expect(output).toBe(expected);
     });
 
+    test('1 consonant; capitalised', () => {
+        const input = 'Northcoders';
+
+        const output = pigLatin(input);
+
+        const expected = 'orthcodersNay';
+        
+        expect(output).toBe(expected);
+    });
+
     test('>1 consonant', () => {
         const input = 'sheffield';
 
@@ -37,6 +47,16 @@ describe('', () => {
         const output = pigLatin(input);
 
         const expected = 'algorithmway';
+        
+        expect(output).toBe(expected);
+    });
+
+    test('vowel; capitalised', () => {
+        const input = 'Algorithm';
+
+        const output = pigLatin(input);
+
+        const expected = 'Algorithmway';
         
         expect(output).toBe(expected);
     });
