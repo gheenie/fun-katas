@@ -1,13 +1,16 @@
 const updateRemoteStudents = require('../update-remote-students');
 
 describe('updateRemoteStudents()', () => {
-    test('Original input not mutated', () => {
+    test('Original input not mutated; memory refs are different', () => {
         const input = [{ name: 'Euler', age: 27 }];
 
         const output = updateRemoteStudents(input);
 
         const expected = [{ name: 'Euler', age: 27 }];
+
         expect(input).toEqual(expected);
+        expect(input).not.toBe(output);
+        expect(input[0]).not.toBe(output[0]);
     });
 
     test('one student with no location', () => {
